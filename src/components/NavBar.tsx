@@ -11,13 +11,19 @@ export default function NavBar() {
       <Link href="/about" legacyBehavior>
         <a className={router.pathname === "/about" ? "active" : ""}>about</a>
       </Link>
+      <Link href="/contact" legacyBehavior>
+        <a className={router.pathname === "/contact" ? "active" : ""}>
+          contact
+        </a>
+      </Link>
       <style jsx>
         {`
-          nav {
-            background-color: tomato;
+          a {
+            color: black;
+            text-decoration: none;
           }
           .active {
-            color: pink;
+            color: tomato;
             text-decoration: none;
           }
         `}
