@@ -16,18 +16,6 @@ export default function NavBar() {
           contact
         </a>
       </Link>
-      <style jsx>
-        {`
-          a {
-            color: black;
-            text-decoration: none;
-          }
-          .active {
-            color: tomato;
-            text-decoration: none;
-          }
-        `}
-      </style>
     </nav>
   );
 }

@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+.active {
+  color: tomato;
+  text-decoration: none;
+}
