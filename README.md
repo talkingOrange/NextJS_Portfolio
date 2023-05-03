@@ -1,4 +1,7 @@
+
 This is my project for using NextJS 2023.04.25~
+
+제작 과정 BLOG `https://talkingorange.github.io/`
 
 
 ## 💜 기술 스택 💜
