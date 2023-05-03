@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* 모바일 화면 */
 html {
   box-sizing: border-box;
