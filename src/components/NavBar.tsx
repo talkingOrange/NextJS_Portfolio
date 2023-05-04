@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export default function NavBar() {
   const router = useRouter();
   return (
-    <nav class="my-5">
+    <nav className="my-5">
       <Link href="/about" legacyBehavior>
         <a className={router.pathname === "/about" ? "active" : ""}>ABOUT</a>
       </Link>
