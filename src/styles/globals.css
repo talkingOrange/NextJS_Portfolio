@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-primary{
+  @apply bg-white dark:bg-slate-800
+}
+
 /* 모바일 화면 */
 html {
   box-sizing: border-box;
@@ -38,14 +42,17 @@ body {
   font-size: 16px;
 }
 
-a {
+nav a {
   color: black;
   text-decoration: none;
+  margin-right: 2.2rem;
+  font-size: 1.1rem;
 }
 .active {
   color: tomato;
   text-decoration: none;
 }
+
 
 /* 태블릿 화면 */
 @media (min-width: 768px) {
