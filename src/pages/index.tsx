@@ -4,42 +4,10 @@ import { useEffect, useState } from "react";
 export default function Home({ projects }: any) {
   console.log(projects);
   console.log(projects.results);
-  // const [movies, setMovies] = useState();
-  // useEffect(() => {
-  //   (async () => {
-  //     const { results } = await (await fetch(`/api/movies`)).json();
-  //     setMovies(results);
-  //   })();
-  // }, []);
-
-  // const [movies, setMovies] = useState();
-  // useEffect(() => {
-  //   (async () => {
-  //     const { results } = await (await fetch(`/api/portfolios`)).json();
-  //     setMovies(results);
-  //   })();
-  //   console.log(movies);
-  // }, []);
-
-  // const options = {
-  //   method: "GET",
-  //   headers: { accept: "application/json", "Notion-Version": "2022-06-28" },
-  // };
-
-  // fetch(`/api/portfolios`, options)
-  //   .then((response) => response.json())
-  //   .then((response) => console.log(response))
-  //   .catch((err) => console.error(err));
 
   return (
     <div>
       <Seo title="Home" />
-      {/* {!movies && <h4>Loading...</h4>}
-      {movies?.map((movie) => (
-        <div key={movie.id}>
-          <h4>{movie.original_title}</h4>
-        </div>
-      ))}  */}
 
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
