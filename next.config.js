@@ -2,6 +2,7 @@
 const API_KEY = process.env.API_KEY;
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+const NEXT_PUBLIC_GA_ID= process.env.NEXT_PUBLIC_GA_ID;
 
 const nextConfig = {
   reactStrictMode: true,
@@ -20,4 +21,3 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
