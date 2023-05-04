@@ -8,8 +8,8 @@ export default function Header() {
     <>
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <Link href="/about" legacyBehavior>
-            <div className="flex items-center mb-4 md:mb-0">
+          <Link href="/" legacyBehavior>
+            <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
               <Image
                 src="/profileImg.jpg"
                 alt="Picture of the author"
