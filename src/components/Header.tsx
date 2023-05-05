@@ -11,7 +11,7 @@ export default function Header() {
           <Link href="/" legacyBehavior>
             <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
               <Image
-                src="/profileImg.jpg"
+                src="/profileImg.svg"
                 alt="Picture of the author"
                 width={40} //automatically provided
                 height={40} //automatically provided
