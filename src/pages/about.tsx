@@ -6,10 +6,8 @@ export default function about() {
   return (
     <>
       <div>
-        <Seo title="HOME" />
+        <Seo title="ABOUT" />
       </div>
-      <Introduce />
-      <Skills />
     </>
   );
 }
