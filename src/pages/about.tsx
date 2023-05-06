@@ -1,12 +1,18 @@
 import Seo from "@/components/@common/Seo";
-import Introduce from "../components/index/Introduce";
-import Skills from "../components/index/Skills";
+import Intro from "../components/about/Intro";
+import Career from "../components/about/Career";
+import DevelopmentExperiences from "../components/about/DevelopmentExperiences";
+import NonDevelopmentExperiences from "../components/about/Non-DevelopmentExperiences";
 
 export default function about() {
   return (
     <>
       <div>
         <Seo title="ABOUT" />
+        <Intro />
+        <Career />
+        <DevelopmentExperiences />
+        <NonDevelopmentExperiences />
       </div>
     </>
   );
