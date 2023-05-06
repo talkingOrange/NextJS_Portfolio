@@ -1,4 +1,4 @@
-import Seo from "@/components/Seo";
+import Seo from "@/components/@common/Seo";
 import { useEffect, useState } from "react";
 
 export default function project({ projects }: any) {

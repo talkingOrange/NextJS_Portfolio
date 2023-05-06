@@ -1,12 +1,12 @@
-import Seo from "@/components/Seo";
-import Introduce from "../components/Introduce";
-import Skills from "../components/Skills";
+import Seo from "@/components/@common/Seo";
+import Introduce from "../components/index/Introduce";
+import Skills from "../components/index/Skills";
 
 export default function about() {
   return (
     <>
       <div>
-        <Seo title="ABOUT" />
+        <Seo title="HOME" />
       </div>
       <Introduce />
       <Skills />
