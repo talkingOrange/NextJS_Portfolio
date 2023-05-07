@@ -12,7 +12,7 @@ export default function project({ projects }: any) {
       <Seo title="PROJECT" />
 
       {projects.results?.map((project: any) => (
-        <Project data={project} />
+        <Project data={project} key={project.id} />
       ))}
     </div>
   );
