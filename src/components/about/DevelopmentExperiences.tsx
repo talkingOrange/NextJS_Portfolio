@@ -3,11 +3,11 @@ export default function DevelopmentExperiences() {
     <>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
+        <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center border-b-2 border-gray-100 pb-5">
             👩‍💻 Development Experiences
           </h1>
           <div className="flex flex-wrap -m-4">
-            <div className="p-4 md:w-1/2 w-full">
+            <div className="p-4 md:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <div className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>

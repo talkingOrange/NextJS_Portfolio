@@ -3,7 +3,7 @@ export default function NonDevelopmentExperiences() {
     <>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
+        <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center border-b-2 border-gray-100 pb-5">
             🤗 Non-Development Experiences
           </h1>
           <div className="flex flex-wrap -m-4">
