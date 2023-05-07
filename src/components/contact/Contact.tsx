@@ -20,8 +20,8 @@ export default function Contact() {
 
     try {
       emailjs.sendForm(
-        NEXT_PUBLIC_NEXT_PUBLIC_MAIL_SERVER_KEY,
-        NEXT_PUBLIC_MAIL_TEMPLATE_KEY,
+        NEXT_PUBLIC_NEXT_PUBLIC_MAIL_SERVER_KEY as string,
+        NEXT_PUBLIC_MAIL_TEMPLATE_KEY as string,
         form.current,
         NEXT_PUBLIC_MAIL_PRIVATE_KEY
       );
@@ -167,8 +167,6 @@ export default function Contact() {
           </form>
         </div>
       </section>
-
-     
     </>
   );
 }
