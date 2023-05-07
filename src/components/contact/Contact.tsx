@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -9,6 +9,9 @@ export default function Contact() {
   const NEXT_PUBLIC_MAIL_PRIVATE_KEY = process.env.NEXT_PUBLIC_MAIL_PRIVATE_KEY;
 
   const form = useRef<HTMLFormElement>(null);
+  const [inputName, setInputName] = useState<string>("");
+  const [inputEmail, setInputEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const onSubmitForm = (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -26,6 +29,9 @@ export default function Contact() {
         NEXT_PUBLIC_MAIL_PRIVATE_KEY
       );
       alert("소중한 의견 감사드립니다.");
+      setInputName("");
+      setInputEmail("");
+      setMessage("");
     } catch (error) {
       alert("메일 전송에 실패하였습니다. ");
     }
@@ -57,6 +63,8 @@ export default function Contact() {
                       name="from_name"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                       required
+                      value={inputName}
+                      onChange={(e) => setInputName(e.target.value)}
                     />
                   </div>
                 </div>
@@ -73,6 +81,8 @@ export default function Contact() {
                       name="reply_to"
                       required
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      value={inputEmail}
+                      onChange={(e) => setInputEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -87,6 +97,8 @@ export default function Contact() {
                     <textarea
                       name="message"
                       className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
                 </div>
@@ -101,7 +113,6 @@ export default function Contact() {
                     경기도 용인시 기흥구 영덕동
                   </p>
                   <span className="inline-flex">
-                    
                     <a className="ml-4 text-gray-500">
                       <svg
                         fill="none"
