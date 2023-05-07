@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function DarkModeBtn() {
   const { theme, setTheme } = useTheme();
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   function handleModeBtn() {
     setIsDarkMode(!isDarkMode);

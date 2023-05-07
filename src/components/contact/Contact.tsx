@@ -28,7 +28,7 @@ export default function Contact() {
         form.current,
         NEXT_PUBLIC_MAIL_PRIVATE_KEY
       );
-      alert("소중한 의견 감사드립니다.");
+      alert("메일이 전송되었습니다.");
       setInputName("");
       setInputEmail("");
       setMessage("");
