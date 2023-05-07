@@ -1,24 +1,19 @@
 import Seo from "@/components/@common/Seo";
 import { useEffect, useState } from "react";
+import Project from "../components/project/project";
 
 export default function project({ projects }: any) {
   console.log(projects);
   console.log(projects.results);
+  console.log(projects.results.properties);
 
   return (
     <div>
       <Seo title="PROJECT" />
 
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
-          {!projects && <h4>Loading...</h4>}
-          {projects.results?.map((project: any) => (
-            <div key={project.id}>
-              <h4>{project.created_time}</h4>
-            </div>
-          ))}
-        </div>
-      </section>
+      {projects.results?.map((project: any) => (
+        <Project data={project} key={project.id} />
+      ))}
     </div>
   );
 }
