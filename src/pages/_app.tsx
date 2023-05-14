@@ -6,6 +6,7 @@ import * as gtag from "../lib/gtag";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import { Provider } from "@lyket/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -45,7 +46,9 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <ThemeProvider attribute="class">
         <Layout>
-          <Component {...pageProps} />
+          <Provider apiKey="pt_dfff335817fbc912f5f8bf9b247076">
+            <Component {...pageProps} />
+          </Provider>
         </Layout>
       </ThemeProvider>
     </>
