@@ -12,6 +12,7 @@ export default function project({ data }: any) {
   const participant = data.properties.Participant.number;
   const role = data.properties.Role.rich_text[0].plain_text;
   const primaryFunction = data.properties.Function.rich_text[0].plain_text;
+  console.log(data.id);
 
   return (
     <>
@@ -110,8 +111,8 @@ export default function project({ data }: any) {
                     자세히보기
                   </button>
                   <LikeButton
-                    id="do-you-like-pizza"
-                    namespace="faq"
+                    id="like"
+                    namespace={data.id}
                     hideCounterIfLessThan={1}
                   >
                     {({
