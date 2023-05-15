@@ -21,7 +21,7 @@ export default function project({ data }: any) {
 
     // 팝업 창 크기
     const width = 600;
-    const height = 400;
+    const height = 600;
 
     // 팝업 창 위치 (화면 중앙)
     const left = window.screen.width / 2 - width / 2;
