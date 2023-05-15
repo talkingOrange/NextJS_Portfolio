@@ -6,6 +6,7 @@ export default function project({ data }: any) {
   const github = data.properties.Github.url;
   const youtube = data.properties.Youtube.url;
   const homePage = data.properties.Page.url;
+  const readMore = data.properties.ReadMore.url;
   const imgSrc = data.cover.external?.url || data.cover.file?.url;
   const tags = data.properties.Tags.multi_select;
   const startPeriod = data.properties.WorkPeriod.date.start;
@@ -16,12 +17,11 @@ export default function project({ data }: any) {
 
   function openPopup() {
     // 타 사이트 페이지 URL
-    const url =
-      "https://www.notion.so/invented-felidae-14b/PORTFOLIO-16e269ff9b064c5bb1ef0a539ea58cf8";
+    let url = `${readMore}`;
 
     // 팝업 창 크기
     const width = 600;
-    const height = 400;
+    const height = 600;
 
     // 팝업 창 위치 (화면 중앙)
     const left = window.screen.width / 2 - width / 2;
