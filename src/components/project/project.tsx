@@ -1,6 +1,9 @@
-import { LikeButton } from "@lyket/react";
+import ReadMore from "./readMore";
+import LikeBtn from "./likeBtn";
 
 export default function project({ data }: any) {
+
+  const dataId = data.id;
   const projectName = data.properties.Name.title[0].plain_text;
   const description = data.properties.Description.rich_text[0].plain_text;
   const github = data.properties.Github.url;
@@ -14,35 +17,6 @@ export default function project({ data }: any) {
   const participant = data.properties.Participant.number;
   const role = data.properties.Role.rich_text[0].plain_text;
   const primaryFunction = data.properties.Function.rich_text[0].plain_text;
-
-  function openPopup() {
-    // 타 사이트 페이지 URL
-    let url = `${readMore}`;
-
-    // 팝업 창 크기
-    const width = 600;
-    const height = 600;
-
-    // 팝업 창 위치 (화면 중앙)
-    const left = window.screen.width / 2 - width / 2;
-    const top = window.screen.height / 2 - height / 2;
-
-    // 스크롤바 여부
-    const scrollbars = "no";
-    const status = "no";
-    const titlebar = "no";
-    const directories = "no";
-    const location = "no";
-    const menubar = "no";
-    const toolbar = "no";
-
-    // 팝업 창 열기
-    window.open(
-      url,
-      "popup",
-      `width=${width}, height=${height}, left=${left}, top=${top}, scrollbars=${scrollbars}, status=${status}, titlebar=${titlebar}, directories=${directories}, location=${location}, menubar=${menubar}, toolbar=${toolbar}`
-    );
-  }
 
   return (
     <>
@@ -137,47 +111,8 @@ export default function project({ data }: any) {
                   </div>
                 </div>
                 <div className="flex">
-                  <button
-                    onClick={openPopup}
-                    className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-                  >
-                    자세히보기
-                  </button>
-                  <LikeButton
-                    id="like"
-                    namespace={data.id}
-                    hideCounterIfLessThan={1}
-                  >
-                    {({
-                      handlePress,
-                      totalLikes,
-                      userLiked,
-                      isLoading,
-                      isCounterVisible,
-                    }) => (
-                      <>
-                        <button
-                          onClick={handlePress}
-                          disabled={isLoading}
-                          className=" rounded-full w-10 h-10 bg-gray-100 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
-                        >
-                          <svg
-                            fill={userLiked ? "red" : "currentColor"}
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            className="w-5 h-5"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                          </svg>
-                        </button>
-                        <div className="inline-flex justify-center ml-3 mt-1">
-                          {totalLikes}
-                        </div>
-                      </>
-                    )}
-                  </LikeButton>
+                  <ReadMore readMore={readMore} />
+                  <LikeBtn id={dataId} />
                 </div>
               </div>
             </div>
