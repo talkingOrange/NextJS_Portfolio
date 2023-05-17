@@ -25,7 +25,7 @@ export default function project({ data }: any) {
             <div className="lg:w-5/5 mx-auto flex flex-wrap">
               <img
                 alt="ecommerce"
-                className="border-2 border-blue-200 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+                className="border-2 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src={imgSrc}
               />
 
