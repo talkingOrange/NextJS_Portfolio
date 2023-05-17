@@ -9,6 +9,7 @@
 /* 모바일 화면 */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
