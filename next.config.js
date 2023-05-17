@@ -11,7 +11,15 @@ module.exports = {
       "images.unsplash.com",
       "s3.us-west-2.amazonaws.com",
     ],
-    format: ["image/png", "image/webp", "image/jpeg"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.vercel.com",
+        port: "",
+        pathname: "/image/upload/**",
+      },
+    ],
+    format: ["image/png", "image/webp", "image/jpeg", "image/avif"],
   },
 };
 const nextConfig = {

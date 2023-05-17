@@ -45,7 +45,10 @@ export default function Contact() {
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               CONTACT ME
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">메시지</p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+              작성해주신 메시지가 저의 메일로 전송됩니다. 이메일 주소를 정확히
+              확인 부탁드립니다.
+            </p>
           </div>
           <form ref={form} onSubmit={onSubmitForm}>
             <div className="lg:w-1/2 md:w-2/3 mx-auto">
@@ -109,11 +112,12 @@ export default function Contact() {
                 </div>
                 <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                   <a className="text-indigo-500">sonrisa-bonita@naver.com</a>
-                  <p className="leading-normal my-5">
-                    경기도 용인시 기흥구 영덕동
-                  </p>
+                  <p className="leading-normal my-5"></p>
                   <span className="inline-flex">
-                    <a className="ml-4 text-gray-500">
+                    <a
+                      className="ml-4 text-gray-500"
+                      href="https://www.instagram.com/5ning_i/"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -134,7 +138,10 @@ export default function Contact() {
                         <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                       </svg>
                     </a>
-                    <a className="ml-4 text-gray-500">
+                    <a
+                      className="ml-4 text-gray-500"
+                      href="https://open.kakao.com/o/szCubOkf"
+                    >
                       <svg
                         fill="currentColor"
                         stroke-linecap="round"
