@@ -28,7 +28,6 @@ export default function project({ data }: any) {
                 className="border-2 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                 src={imgSrc}
               />
-
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">
                   {startPeriod} &#126; {endPeriod}
