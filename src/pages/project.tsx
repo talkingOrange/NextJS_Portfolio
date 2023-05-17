@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 import Project from "../components/project/project";
 
 export default function project({ projects }: any) {
-  console.log(projects);
-  console.log(projects.results);
-  console.log(projects.results.properties);
-
   return (
     <div>
       <Seo title="PROJECT" />
