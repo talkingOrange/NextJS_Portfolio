@@ -41,10 +41,12 @@ p {
 
 body {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 nav div {
-  color: black;
+  color: rgba(128, 128, 128, 0.921);
+  font-weight: 600;
   text-decoration: none;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -52,8 +54,11 @@ nav div {
   cursor: pointer;
   display: inline-flex;
 }
+nav div:hover {
+  color: #020202;
+}
 .active {
-  color: tomato;
+  color: #004390;
   text-decoration: none;
 }
 
