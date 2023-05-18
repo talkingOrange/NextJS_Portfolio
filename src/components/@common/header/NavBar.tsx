@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <nav className="my-5">
       <Link href="/about" legacyBehavior>
-        <div className={router.pathname === "/about" ? "active" : ""}>
+        <div className={router.pathname === "/about" || "/" ? "active" : ""}>
           ABOUT
         </div>
       </Link>

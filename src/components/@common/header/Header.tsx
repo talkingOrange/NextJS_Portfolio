@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <header className="text-gray-600 body-font">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
           <Link href="/" legacyBehavior>
             <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
               <Image
