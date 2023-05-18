@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font border-b-2 border-gray-100 ">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link href="/" legacyBehavior>
             <div className="flex items-center mb-4 md:mb-0 cursor-pointer">
