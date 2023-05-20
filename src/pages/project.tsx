@@ -16,7 +16,8 @@ export default function project({ projects }: any) {
 
 //서버에서 찍히는 부분
 export async function getStaticProps() {
-  const NOTION_DATABASE_ID = "2f8e51b3c14b43c9adef4f52c78d5787";
+  const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+
   const options = {
     method: "POST",
     headers: {
