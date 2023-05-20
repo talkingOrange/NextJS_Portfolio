@@ -28,7 +28,7 @@ export default function MoveText({
       if (textElement) {
         if (move === 0) {
           textElement.style.transform = `translateY(${distance}px)`;
-        } else {
+        } else if (scale < 2.6) {
           textElement.style.transform = ` translateY(${distance}px) scale(${scale})`;
         }
       }
