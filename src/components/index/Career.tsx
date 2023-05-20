@@ -13,7 +13,7 @@ export default function Career() {
               </h1>
 
               <p className="mb-4 text-center text-white sm:text-left md:text-lg">
-                2022.09.01 ~ 2022.12.31
+                2022.09.01 ~ 2022.12.31 (인턴)
                 <ul>
                   <li>1. 웹 퍼블리싱 업무</li>
                   <ul>
