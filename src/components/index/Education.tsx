@@ -1,19 +1,45 @@
 import MoveText from "../@common/MoveText";
+import { useEffect, useState } from "react";
+
+const images = ["/computer.png", "/brain3.png", "/book.png"];
+
+const colors = ["#0EE896", "#DE4578", "#f49c0d", "#9AEB3D"];
 
 export default function Education() {
+  const [currentImage, setCurrentImage] = useState(images[0]);
+  const [circleColor, setCircleColor] = useState(colors[0]);
+
+  console.log(currentImage);
+  console.log(circleColor);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // 현재 이미지 인덱스 계산
+      const currentIndex = images.indexOf(currentImage);
+      const nextIndex = (currentIndex + 1) % images.length;
+
+      // 다음 이미지로 변경
+      setCurrentImage(images[nextIndex]);
+      setCircleColor(colors[nextIndex]);
+    }, 3000);
+    return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 제거
+  }, [currentImage]);
+
   return (
     <>
-      <div className="flex justify-center items-center h-full text-white">
+      <div className="flex justify-center items-center text-white">
         <MoveText text="Excellent" move={1} />
       </div>
       <div className="bg-white py-6 sm:py-0 bg-[url('/universityImg.jpg')] bg-no-repeat bg-cover bg-opacity-100 -mt-20 ">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
           <div className="grid gap-8 sm:grid-cols-2 sm:gap-12 pt-20 pb-20">
             <div className="flex flex-col items-center justify-center sm:items-start md:py-6 lg:py-12 xl:py-24">
-              <div className=" relative  xl:ml-40 md:ml-15 sm:ml-4 w-80 h-80 rounded-full bg-[#9e76ca] overflow-hidden">
+              <div
+                className={`relative  xl:ml-40 md:ml-15 sm:ml-4 w-80 h-80 rounded-full bg-[${circleColor}]`}
+              >
                 <img
-                  src="/study.png"
-                  className="w-[13rem] absolute bottom-4 left-14"
+                  src={currentImage}
+                  alt="education"
+                  className="w-[20rem] absolute -bottom-5 left-0 "
                 />
               </div>
             </div>
