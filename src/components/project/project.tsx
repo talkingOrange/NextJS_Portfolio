@@ -17,6 +17,8 @@ export default function project({ data }: any) {
   const role = data.properties.Role.rich_text[0].plain_text;
   const primaryFunction = data.properties.Function.rich_text[0].plain_text;
 
+console.log(imgSrc);
+
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
