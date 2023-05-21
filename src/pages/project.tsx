@@ -16,14 +16,15 @@ export default function project({ projects }: any) {
 //서버에서 찍히는 부분
 export async function getStaticProps() {
   const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+  const NOTION_TOKEN = process.env.NOTION_TOKEN;
+
   const options = {
     method: "POST",
     headers: {
       accept: "application/json",
       "Notion-Version": "2022-06-28",
       "Content-Type": "application/json",
-      Authorization:
-        "Bearer secret_vlMd7yCIqLbNC8RiDIXzeFBEcPJNpIeUTW4zrU1kgKb",
+      Authorization: `Bearer ${NOTION_TOKEN}`,
     },
     body: JSON.stringify({ page_size: 100 }),
   };
