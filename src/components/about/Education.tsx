@@ -12,7 +12,6 @@ export default function Education() {
           </h2>
           <div className="flex mb-4">
             <span className="text-gray-600 ml-3">
-              학점 4.16 / 4.5 <br/>
               2019.03 ~ 2023.08.(졸업예정) <br/>
               학점 4.16 / 4.5
             </span>
