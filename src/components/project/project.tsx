@@ -18,6 +18,7 @@ export default function project({ data }: any) {
   const primaryFunction = data.properties.Function.rich_text[0].plain_text;
 
 console.log(imgSrc);
+console.log(data);
 
   return (
     <>
