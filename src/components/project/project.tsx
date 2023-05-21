@@ -9,16 +9,13 @@ export default function project({ data }: any) {
   const youtube = data.properties.Youtube.url;
   const homePage = data.properties.Page.url;
   const readMore = data.properties.ReadMore.url;
-  const imgSrc = data.cover.external?.url || data.cover.file?.url;
+  const imgSrc = data.cover.file.url;
   const tags = data.properties.Tags.multi_select;
   const startPeriod = data.properties.WorkPeriod.date.start;
   const endPeriod = data.properties.WorkPeriod.date.end;
   const participant = data.properties.Participant.number;
   const role = data.properties.Role.rich_text[0].plain_text;
   const primaryFunction = data.properties.Function.rich_text[0].plain_text;
-
-console.log(imgSrc);
-console.log(data);
 
   return (
     <>
