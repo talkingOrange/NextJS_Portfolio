@@ -1,7 +1,7 @@
 import ReadMore from "./readMore";
 import LikeBtn from "./likeBtn";
 
-export default function project({ data }: any) {
+export default function project({ data, image }: any) {
   const dataId = data.id;
   const projectName = data.properties.Name.title[0].plain_text;
   const description = data.properties.Description.rich_text[0].plain_text;
@@ -9,7 +9,7 @@ export default function project({ data }: any) {
   const youtube = data.properties.Youtube.url;
   const homePage = data.properties.Page.url;
   const readMore = data.properties.ReadMore.url;
-  const imgSrc = data.cover.external?.url || data.cover.file?.url;
+  //const imgSrc = data.cover.file.url;
   const tags = data.properties.Tags.multi_select;
   const startPeriod = data.properties.WorkPeriod.date.start;
   const endPeriod = data.properties.WorkPeriod.date.end;
@@ -26,7 +26,7 @@ export default function project({ data }: any) {
               <img
                 alt="ecommerce"
                 className="border-2 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-                src={imgSrc}
+                src={image}
               />
               <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">
