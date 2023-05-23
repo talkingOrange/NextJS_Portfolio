@@ -3,12 +3,26 @@ import { useEffect, useState } from "react";
 import Project from "../components/project/project";
 
 export default function project({ projects }: any) {
+  const images = [
+    "/project7.png",
+    "/project6.png",
+    "/project5.jpg",
+    "/project4.jpg",
+    "/project3.png",
+    "/project2.png",
+    "/project1.jpeg",
+  ];
+
   return (
     <div>
       <Seo title="PROJECT" />
 
-      {projects.results?.map((project: any) => (
-        <Project data={project} key={project.id} />
+       {projects.results?.map((project: any, index: number) => (
+        <Project
+          data={project}
+          key={project.id}
+          image={images[index % images.length]}
+        />
       ))}
     </div>
   );
