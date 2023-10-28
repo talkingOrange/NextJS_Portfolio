@@ -63,7 +63,7 @@ export default function project({ data, image }: any) {
                       </svg>
                     </a>
                     {homePage !== null && (
-                      <a className="text-gray-500 mr-1" href={homePage}>
+                      <a className="text-gray-500 mr-1" href={homePage ? (homePage.startsWith('http') ? homePage : `http://${homePage}`) : "#"}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           x="0px"
